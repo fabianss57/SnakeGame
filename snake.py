@@ -7,7 +7,6 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
-
 class Snake:
     def __init__(self):
         self.snake_body = []
@@ -27,7 +26,6 @@ class Snake:
 
     def grow_snake(self):
         self.add_body_segment(self.snake_body[-1].position())
-
 
     def move_snake(self):
         for segment_num in range(len(self.snake_body)-1, 0,-1):

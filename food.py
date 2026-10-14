@@ -1,7 +1,6 @@
 from turtle import Turtle
 import random
 
-
 class Food(Turtle):
 
     def __init__(self):
@@ -17,27 +16,9 @@ class Food(Turtle):
 
         self.goto(food_spawn_x,food_spawn_y)
 
-
     def spawn_different_location(self):
         food_spawn_x = random.randrange(-280, 280)
         food_spawn_y = random.randrange(-280, 280)
 
         self.goto(food_spawn_x, food_spawn_y)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

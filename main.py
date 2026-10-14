@@ -1,7 +1,6 @@
 import time
-from operator import index
 from turtle import Turtle,Screen
-import random
+
 
 from food import Food
 from snake import Snake
