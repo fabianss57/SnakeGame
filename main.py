@@ -37,40 +37,18 @@ while game_running:
     if snake.head.distance(food) < 15:
         food.spawn_different_location()
         scoreboard.increase_score()
+        snake.grow_snake()
 
+    #Collision with wall will end the game
+    if snake.head.xcor() > 300 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -300:
+        scoreboard.game_over()
+        game_running = False
 
-
-
-
-
-
-
-# for turtle in snake_body:
-#     x_difference = 0 - (snake_body.index(turtle)*20)
-#     turtle.goto(x_difference,0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #Collision with tail will end the game
+    for body_segment in snake.snake_body[2:]:
+        if snake.head.distance(body_segment) < 10:
+            scoreboard.game_over()
+            game_running = False
 
 
 
